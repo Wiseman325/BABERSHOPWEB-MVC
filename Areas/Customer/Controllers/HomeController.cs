@@ -1,9 +1,10 @@
-using BABERSHOPWEB.Models;
+using BABERSHOP.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BABERSHOPWEB.Controllers
+namespace BABERSHOPWEB.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

@@ -1,0 +1,44 @@
+﻿@model ProductType
+
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="text-white py-2">
+                    <h2 class="text-primary">Delete Category</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form class="row" method="post">
+            <input asp-for="ProductTypeId" hidden />
+            <div class="border p-3 mt-4">
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ProductType_Name" disabled class="form-control border-0 shadow" />
+                    <label asp-for="ProductType_Name" class="ms-2">Category Name</label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="ProductType_Description" disabled class="form-control border-0 shadow" />
+                    <label asp-for="ProductType_Description" class="ms-2">Description</label>
+                </div>
+                <div class="form-floating py-2 col-12">
+                    <input asp-for="DisplayOder" disabled class="form-control border-0 shadow" />
+                    <label asp-for="DisplayOder" class="ms-2">Display Order</label>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-danger form-control">
+                            Delete
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="ProductType" asp-action="Index" class="btn btn-outline-primary border form-control">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
